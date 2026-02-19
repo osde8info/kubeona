@@ -11,7 +11,7 @@ description: Cloud photos & videos backup stack
 
 ----
 
-# KUBEONA.CLOUD
+## KUBEONA.CLOUD
 
 A free libre opensource cloud photos & videos backup stack
 
