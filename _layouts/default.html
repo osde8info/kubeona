@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ page.title }}</title>
+
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id=GTM-PK9JJ6T4' + dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PK9JJ6T4');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  {% if site.styles %}
+    {% for style in site.styles %}
+      <link rel="stylesheet" href="{{ style }}">
+    {% endfor %}
+  {% endif %}
+
+  <style>
+    .thumb-strip {
+      border-collapse: collapse;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    .thumb-strip td {
+      padding: 0.15rem;
+    }
+
+    .thumb-strip img {
+      width: 1in;
+      height: 1in;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK9JJ6T4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    {% include header.html %}
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    {% include footer.html %}
+  </footer>
+
+  {% if site.scripts %}
+    {% for script in site.scripts %}
+      <script src="{{ script }}"></script>
+    {% endfor %}
+  {% endif %}
+</body>
+</html>
