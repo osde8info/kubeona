@@ -24,13 +24,14 @@
 
   <style>
     .thumb-strip {
-      border-collapse: collapse;
-      table-layout: fixed;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 0.15rem;
+      overflow-x: auto;
       width: 100%;
-    }
-
-    .thumb-strip td {
-      padding: 0.15rem;
+      max-width: 8.7in;
+      margin: 0 auto;
+      padding: 0;
     }
 
     .thumb-strip img {
@@ -38,6 +39,7 @@
       height: 1in;
       object-fit: cover;
       display: block;
+      flex: 0 0 auto;
     }
   </style>
 </head>
